@@ -1,0 +1,10 @@
+<ul id="social">
+  {{ range .Site.Params.social }}
+    <li>
+      <a href="{{ .url }}" target="_blank" rel="me noopener">
+        {{ .name }}
+      </a>
+    </li>
+  {{ end }}
+</ul>
+<div><p>Made by Matt Comi.</p></div>

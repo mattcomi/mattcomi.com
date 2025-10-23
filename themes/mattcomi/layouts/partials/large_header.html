@@ -1,0 +1,8 @@
+  <header class="header-large">
+    <div class="wrapper">
+          <img src={{ .Site.Params.profilePhoto }} alt="Profile photo" class="profile">
+          <h1>{{ .Site.Params.header.title }}</h1>
+          <h2>{{ .Site.Params.header.subtitle }}</h2>
+          <p>{{ .Site.Params.header.description | markdownify }}</p>
+    </div>
+  </header>

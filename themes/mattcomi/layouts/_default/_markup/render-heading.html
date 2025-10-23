@@ -1,0 +1,5 @@
+{{- $offset := 3 }}
+{{- $level := add .Level $offset }}
+<h{{ $level }} id="{{ .Anchor | safeHTMLAttr }}">
+  {{ .Text | safeHTML }}
+</h{{ $level }}>

@@ -1,0 +1,297 @@
+:root {
+  font-family: 'SF Pro Text',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  
+  --background: rgb(246, 248, 247);
+  --secondary-background: rgb(242, 244, 243);
+  --code-background: rgba(129, 139, 152, 0.12);
+  --label: rgb(60, 60, 60);
+  --secondary-label: rgb(133, 133, 134);
+  --tertiary-label: rgb(180, 180, 176);      
+  --accent: rgb(235, 92, 45);
+  --separator: rgb(226, 226, 223);
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  background: var(--secondary-background);
+  color: var(--label);
+  margin: 0;
+  padding: 0
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+body > header, main, body > footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+body > header {
+  background: var(--background);
+  padding-top: 4rem;
+}
+
+body > header > :last-child {
+  padding-bottom: 2rem;
+}
+
+body > header .wrapper {
+  border-bottom: 1px solid var(--separator);
+}
+
+main section {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--separator);
+}
+
+main section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+main {
+  background: var(--background);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}    
+
+body > footer {
+  color: var(--tertiary-label);
+  border-top: 1px solid var(--separator);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+body > header h1 {
+  font-weight: 800;
+  letter-spacing: -0.08rem;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+body > header.header-small h1 {
+  color: var(--tertiary-label);
+  font-size: 2rem;
+  padding-bottom: 0rem;
+}
+
+body > header.header-small a {
+  color: var(--secondary-label);
+}
+
+body > header.header-small a:hover {
+  color: var(--accent);
+}    
+
+body > header.header-large h1 {
+  color: var(--secondary-label);
+  font-size: 3rem;
+  margin: 0 0 0.5rem 0;  
+}
+
+body > header.header-large h2 {
+  color: var(--secondary-label);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+.profile {
+  height: 4rem;         /* fixed height */
+  aspect-ratio: 1;      /* keep square */
+  border-radius: 50%;   /* make it circular */
+  object-fit: cover;    /* crop neatly */
+  flex-shrink: 0;       /* don’t shrink when text wraps */
+  margin-bottom: 1.5rem;
+}
+
+body > header p {
+  color: var(--tertiary-label);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+    
+header.section-header {
+  padding-bottom: 1rem;
+}
+
+header.section-header h2 {
+  color: var(--secondary-label);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+#single-article h2 {
+  color: var(--label);
+  font-size: 2rem;
+}
+
+header.section-header p {
+  color: var(--tertiary-label);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.03rem;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0 0 0.75rem 0;      
+}
+
+body > footer a {
+  color: var(--secondary-label);
+  font-weight: 600;
+}
+
+body > footer a:hover {
+  color: var(--accent);
+}
+
+#social {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#article-list ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+#article-list h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0; 
+}
+
+#article-list .article-list-date {
+  color: var(--tertiary-label);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+article h4 {
+  color: var(--label);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0 0 0.5rem 0;
+}
+
+article h5 {
+  color: var(--label);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03rem;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0 0 0.5rem 0;
+}
+
+article h6 {
+  color: var(--label);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.03rem;
+  line-height: 1.25;
+  margin: 0 0 1rem 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0 0 0.5rem 0;
+}
+
+article p, article li {
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 0 1rem 0;
+  overflow-wrap: break-word;
+}
+
+article li {
+  margin: 0;
+}
+
+article ol {
+  padding-left: 2em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#article-list h3 code, #single-article header code {
+  white-space: break-spaces;
+  font-size: 85%;
+}
+
+article p code, article li code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: var(--code-background);
+  background-opacity: 0.1;
+  border-radius: 6px;
+}
+
+article p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+article pre {
+  padding: 1rem;
+  overflow: scroll;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  font-weight: 500;
+}

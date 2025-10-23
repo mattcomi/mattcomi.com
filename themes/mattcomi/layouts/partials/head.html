@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ with .Summary }}{{ . | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  
+  <title>mattcomi</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ absURL `styles/style.css` }}">
+  {{ with .Site.Home.OutputFormats.Get "RSS" }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type | safeHTMLAttr }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
+  {{ end }}
+</head>

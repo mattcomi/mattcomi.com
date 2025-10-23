@@ -1,0 +1,50 @@
+baseURL = 'https://mattcomi.com/'
+languageCode = 'en-us'
+title = 'mattcomi'
+theme = 'mattcomi'
+
+[outputs]
+home = ['html', 'rss']
+section = ['html']
+taxonomy = ['html']
+term = ['html']
+
+[params]
+description = "I live in Perth, Western Australia and I write Swift."
+profilePhoto = "images/profile.jpg"
+
+[params.author]
+email = 'mattcomi@gmail.com'
+name = 'Matt Comi'
+
+[params.header]
+title = "Hi, I’m Matt Comi."
+description = """
+I work at [Jam.dev](https://jam.dev). I’m the developer of [TV Forecast](https://tvforecastapp.com) and the games Stagehand, [Space Age](https://spaceageapp.com) and [The Incident](https://theincidentapp.com).
+"""
+
+[[params.social]]
+name = "Mastodon"
+url = "https://mastodon.social/@mattcomi"
+
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/mattcomi"
+
+[[params.social]]
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/matt-comi-86b4a31"
+
+[[params.social]]
+name = "Instagram"
+url = "https://instagram.com/mattcomi"
+
+[markup]
+  [markup.highlight]
+    style = 'xcode-dark'
+    
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
