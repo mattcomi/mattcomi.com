@@ -11,6 +11,18 @@
   --separator: rgb(226, 226, 223);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: rgb(24, 24, 24);
+    --secondary-background: rgb(27, 28, 29);
+    --label: rgb(236, 236, 240);
+    --secondary-label: rgb(173, 173, 170);
+    --tertiary-label: rgb(110, 110, 110);
+    --accent: rgb(247, 90, 40);
+    --separator: rgb(46, 46, 46)
+  }
+}
+
 html {
   font-size: 16px;
 }
@@ -109,8 +121,8 @@ body > header.header-small a:hover {
 
 body > header.header-large h1 {
   color: var(--secondary-label);
-  font-size: 3rem;
-  margin: 0 0 0.5rem 0;  
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
 body > header.header-large h2 {
@@ -124,17 +136,17 @@ body > header.header-large h2 {
 }
 
 .profile {
-  height: 4rem;         /* fixed height */
-  aspect-ratio: 1;      /* keep square */
-  border-radius: 50%;   /* make it circular */
-  object-fit: cover;    /* crop neatly */
-  flex-shrink: 0;       /* don’t shrink when text wraps */
+  height: 4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
   margin-bottom: 1.5rem;
 }
 
 body > header p {
   color: var(--tertiary-label);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.03rem;
   line-height: 1.25;
@@ -148,7 +160,7 @@ header.section-header {
 
 header.section-header h2 {
   color: var(--secondary-label);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
   line-height: 1.25;
@@ -158,12 +170,12 @@ header.section-header h2 {
 
 #single-article h2 {
   color: var(--label);
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 header.section-header p {
   color: var(--tertiary-label);
-  font-size: 1.25rem;
+  font-size: 1em;
   font-weight: 600;
   letter-spacing: -0.03rem;
   line-height: 1.3;
@@ -199,7 +211,7 @@ body > footer a:hover {
 }
 
 #article-list h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.05rem;
   line-height: 1.25;
@@ -294,4 +306,9 @@ article pre {
   font-size: 0.8rem;
   line-height: 1.6;
   font-weight: 500;
+}
+
+.highlight, .highlight * {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
